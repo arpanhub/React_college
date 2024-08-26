@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="res"></p>
+    <p class="res1"></p>
+    <p class="res2"></p>
+    <p class="res3"></p>
+    <p class="res4"></p>
+    <script type="module">
+    import {add,subtract,multiply,divide,modulus} from './modules.js';
+        const a = 25;
+        const b = 25;
+        const res = `Add:${a} + ${b} = ${add(a,b)}`;
+        const res1 = `Subtract:${a} - ${b} = ${subtract(a,b)}`;
+        const res2 = `Multiply:${a} * ${b} = ${multiply(a,b)}`;
+        const res3 = `Divide:${a} / ${b} = ${divide(a,b)}`;
+        const res4 = `Modulus:${a} % ${b} = ${modulus(a,b)}`;
+        document.getElementsByClassName('res')[0].innerHTML = res;
+        document.getElementsByClassName('res1')[0].innerHTML = res1;
+        document.getElementsByClassName('res2')[0].innerHTML = res2;
+        document.getElementsByClassName('res3')[0].innerHTML = res3;
+        document.getElementsByClassName('res4')[0].innerHTML = res4;
+    </script>
+</body>
+</html>
